@@ -1,41 +1,13 @@
 const ethers = require("ethers");
 const fs = require('fs');
-// const process = require('process');
+const process = require('process');
 
-// let cryptoWallets = {}
-// let addressList = [];
-
-
-// const packName = process.argv[2] + '.json';
-// const walletCount = process.argv[3]; 
-
-// for (let i = 0; i < walletCount; i++) {
-//     const wallet = new ethers.Wallet.createRandom();
-//     const jsonWallet = {
-//         "PrivateKey": wallet.privateKey,
-//         "PublicAddress": wallet.address
-//     }
-//     addressList = [...addressList, jsonWallet ];
-// }
-// cryptoWallets.AddressList = addressList;
-
-// const data = JSON.stringify(cryptoWallets, null, 4);
-
-// // write JSON string to a file
-// fs.writeFile(packName, data, (err) => {
-//     if (err) {
-//         throw err;
-//     }
-//     console.log("JSON data is saved for " + process.argv[2] + " pack");
-// });
-
-
-
-function generateCryptoWallets(packName, walletCount ) {
-    let cryptoWallets = {}
+let cryptoWallets = {}
 let addressList = [];
 
-packName = packName + '.json';
+
+const packName = process.argv[2] + '.json';
+const walletCount = process.argv[3]; 
 
 for (let i = 0; i < walletCount; i++) {
     const wallet = new ethers.Wallet.createRandom();
@@ -57,33 +29,8 @@ fs.writeFile(packName, data, (err) => {
     console.log("JSON data is saved for " + process.argv[2] + " pack");
 });
 
-}
-
-// function readFile(fileName) {
-//     let cryptoWallets;
-//     fs.readFile(fileName, 'utf-8', (err, data) => {
-//         if (err) {
-//             throw err;
-//         }
-//         cryptoWallets = JSON.parse(data.toString());
-//         console.log(cryptoWallets);
-//     });
-
-//     return cryptoWallets;
-// }
-
-async function readFile(path) {
-    return new Promise((resolve, reject) => {
-      fs.readFile(path, 'utf8', function (err, data) {
-        if (err) {
-          reject(err);
-        }
-        resolve(JSON.parse(data));
-      });
-    });
-  }
 
 
-module.exports = {generateCryptoWallets, readFile};
+
 
 

@@ -15,19 +15,5 @@ fs.readFile(fileName, 'utf-8', (err, data) => {
     console.log(cryptoWallets);
 });
 
-function readFile(fileName) {
-    fs.readFile(fileName, 'utf-8', (err, data) => {
-        if (err) {
-            throw err;
-        }
-    
-        // parse JSON object
-        cryptoWallets = JSON.parse(data.toString());
-    
-        // print JSON object
-        console.log(cryptoWallets);
-    });
-}
-
 
 

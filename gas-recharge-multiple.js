@@ -1,6 +1,6 @@
 require("log-timestamp");
 const ethers = require("ethers");
-const lib = require('./crypto-wallet');
+const lib = require('./crypto-lib');
 
 async function sendGas(rpcUrl, chainId, filePath, privateKeyString, publicAddress, gasAmount) {
     const cryptoWallets = await lib.readFile(filePath);
