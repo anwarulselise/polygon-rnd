@@ -8,9 +8,8 @@ const polygon_rp_mainnet = "https://polygon-rpc.com";
 const address = "0xfE63903132e02768006B9f5434ecCbe2e68B3412";
 console.log("Public Address:", address);
 
-const httpsUrl = "https://polygon-mumbai.g.alchemy.com/v2/7K346rg1key-16dbuyO7d5kLu3plVACq";
-console.log("HTTPS Target", httpsUrl);
-const httpsProvider = new ethers.providers.JsonRpcProvider(httpsurl);
+
+const httpsProvider = new ethers.providers.JsonRpcProvider("https://polygon-mumbai.g.alchemy.com/v2/7K346rg1key-16dbuyO7d5kLu3plVACq");
 const init = async function () {
   
 
