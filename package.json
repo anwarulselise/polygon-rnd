@@ -1,0 +1,25 @@
+{
+  "name": "polygon-rnd",
+  "version": "1.0.0",
+  "description": "node crypto-wallet {packName} {numberOfWallets}",
+  "main": "index.js",
+  "dependencies": {
+    "ethers": "^5.6.4",
+    "log-timestamp": "^0.3.0",
+    "nstall": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faizaalam/polygon-rnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faizaalam/polygon-rnd/issues"
+  },
+  "homepage": "https://github.com/faizaalam/polygon-rnd#readme"
+}
